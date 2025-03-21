@@ -1,0 +1,33 @@
+---
+import "../styles/Global.css";
+
+import HeadBase from "../components/HeadBase.astro";
+import Header from "../components/Header.astro";
+import Background from "../components/Background.astro";
+import Footer from "../components/Footer.astro";
+import ClientRouter from "astro/components/ClientRouter.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+  <head>
+    <HeadBase title={title} description={description} />
+  </head>
+  <body
+    class="font-atkinson relative min-h-screen overflow-x-hidden h-full"
+  >
+    <Background />
+    <Header />
+    <div class="xl:w-[76rem] mx-auto py-5 pb-64 px-4 text-black dark:text-white">
+      <slot />
+    </div>
+    <Footer />
+  </body>
+</html>

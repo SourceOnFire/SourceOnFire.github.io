@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import AllPost from "../components/post/AllPost.astro";
+---
+
+<Layout title="Re Simian" description="Software And Gamedev Page">
+    <div class="flex flex-col gap-10">
+        <SectionContainer id="home" title="Posts Recientes">
+            <section>
+                <AllPost limit={4} postType="post"/>
+            </section>
+        </SectionContainer>
+        <SectionContainer id="tools" title="Herramientas recientes">
+            <section>
+                <AllPost limit={4} postType="tool"/>
+            </section>
+        </SectionContainer>
+        <SectionContainer id="addons" title="Plugins recientes">
+            <section>
+                <AllPost limit={4} postType="addon"/>
+            </section>
+        </SectionContainer>
+    </div>
+</Layout>

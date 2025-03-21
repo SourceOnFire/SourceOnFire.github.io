@@ -1,0 +1,96 @@
+---
+import "../content/post.css";
+import HeadBase from "../components/HeadBase.astro";
+import Header from "../components/Header.astro";
+import Background from "../components/Background.astro";
+import Footer from "../components/Footer.astro";
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+type Props = CollectionEntry<"posts">["data"];
+const { title, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="dark">
+    <head>
+        <HeadBase title={title} description={""} />
+    </head>
+    <body
+        class="font-atkinson relative min-h-screen overflow-x-hidden max-w-screen h-full items-center"
+    >
+        <Background />
+        <Header />
+        <main class="xl:w-[76rem] mx-auto py-5 px-1 sm:px-0 pb-64 text-black dark:text-white">
+            <h1
+                class="font-bold text-4xl md:text-5xl text-center items-center mt-10 mb-10 gap-5"
+            >
+                {title}
+            </h1>
+            <article class="dark:bg-black dark:bg-opacity-20 bg-zinc-200 rounded-xl shadow-md">
+                <section
+                    class="text-md sm:text-xl text-start text-pretty p-2 md:p-4"
+                >
+                    {
+                        heroImage && (
+                            <img
+                                src={heroImage}
+                                alt=""
+                                class="w-full rounded-b-2xl"
+                            />
+                        )
+                    }
+                    <!-- Date -->
+                    <div
+                        class="sm:text-xl mb-10 italic flex justify-between flex-col sm:flex-row gap-3"
+                    >
+                        <div>
+                            Publicado:{" "}
+                            <FormattedDate date={pubDate} />
+                        </div>
+
+                        {
+                            updatedDate && (
+                                <div class="">
+                                    Última Actualización:{" "}
+                                    <FormattedDate date={updatedDate} />
+                                </div>
+                            )
+                        }
+                    </div>
+                    <section class="">
+                        <slot />
+                    </section>
+                </section>
+            </article>
+        </main>
+        <Footer />
+    </body>
+</html>
+
+<style>
+    code {
+        padding: 2px 5px;
+        /*background-color: rgb(var(--gray-light));*/
+        border-radius: 2px;
+    }
+    pre {
+        background: #00000017;
+        border: 3px solid #3386f3;
+        color: #727272;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 2.5em;
+        display: block;
+        word-wrap: break-word;
+        border-radius: 7px;
+    }
+    pre > code {
+        all: unset;
+    }
+</style>

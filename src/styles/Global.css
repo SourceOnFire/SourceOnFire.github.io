@@ -1,0 +1,37 @@
+:root {
+	color-scheme: light dark;
+}
+
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+.font-atkinson {
+	font-family: 'Atkinson', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overscroll-behavior: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}

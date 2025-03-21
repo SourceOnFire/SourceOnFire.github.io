@@ -1,0 +1,41 @@
+---
+import PostCard from "./PostCard.astro";
+
+interface Props {
+    posts: any;
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-5">
+    <div>
+        <PostCard
+            link={`/${posts[0].slug}/`}
+            title={posts[0].data.title}
+            imgSrc={posts[0].data.heroImage}
+            description={posts[0].data.description}
+            isFirst
+        />
+    </div>
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+        {
+            posts
+                .filter(function (post: any) {
+                    if (post.data.pubDate != posts[0].data.pubDate) 
+                        return post;
+                })
+                .map((post: any) => (
+                    <li>
+                        <PostCard
+                            link={`/${post.slug}/`}
+                            title={post.data.title}
+                            imgSrc={post.data.heroImage}
+                            description={post.data.description}
+                            isFirst={false}
+                        />
+                    </li>
+                ))
+        }
+    </ul>
+</div>

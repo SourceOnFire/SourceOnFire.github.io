@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import PostGrid from "./PostGrid.astro";
+
+interface Props{
+    limit: number
+    postType: string
+}
+
+const { limit, postType } = Astro.props;
+
+const posts = (await getCollection("posts"))
+.filter(x => x.data.tags?.includes(postType))
+.slice(0, limit)
+.sort(
+    (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+)
+---
+
+<PostGrid posts={posts} />
