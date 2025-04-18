@@ -14,5 +14,5 @@ export default defineConfig({
       theme: 'material-theme-darker',
     },
   },
-  site: "https://ReSimian.github.io",
+  site: "https://SourceOnFire.github.io",
 });
