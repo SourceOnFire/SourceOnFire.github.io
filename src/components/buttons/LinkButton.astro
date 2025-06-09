@@ -1,0 +1,17 @@
+---
+
+interface Props{
+    title: string,
+    link: string
+
+}
+
+const { title, link } = Astro.props;
+
+---
+
+<a 
+href={link} target=_bank 
+class="text-center font-bold p-5 rounded-md bg-blue-600 hover:bg-blue-500"> 
+    {title}
+</a>

@@ -4,19 +4,19 @@ import SectionContainer from "../components/SectionContainer.astro";
 import AllPost from "../components/post/AllPost.astro";
 ---
 
-<Layout title="Re Simian" description="Software And Gamedev Page">
+<Layout title="SourceOnFire" description="Software And Gamedev Page">
     <div class="flex flex-col gap-10">
         <SectionContainer id="home" title="Posts Recientes">
             <section>
                 <AllPost limit={4} postType="post"/>
             </section>
         </SectionContainer>
-        <SectionContainer id="tools" title="Herramientas recientes">
+        <SectionContainer id="apps" title="Aplicaciones Recientes">
             <section>
-                <AllPost limit={4} postType="tool"/>
+                <AllPost limit={4} postType="app"/>
             </section>
         </SectionContainer>
-        <SectionContainer id="addons" title="Plugins recientes">
+        <SectionContainer id="addons" title="Plugins Recientes">
             <section>
                 <AllPost limit={4} postType="addon"/>
             </section>
