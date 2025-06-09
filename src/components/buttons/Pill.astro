@@ -1,0 +1,15 @@
+---
+interface Props {
+    pillname: string
+}
+const { pillname } = Astro.props;
+---
+
+<span
+class="
+inline-block rounded-full px-3 py-1 md:text-sm text-xs font-semibold mr-2 mb-2
+bg-blue-600 text-white
+"
+>
+    {pillname}
+</span>

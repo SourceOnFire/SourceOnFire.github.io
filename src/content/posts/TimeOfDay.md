@@ -4,7 +4,7 @@ description: "Plugin de cielo en dinámico y tiempo para GD Engine4"
 pubDate: "Mar 21 2025"
 updatedDate: "Mar 21 2025"
 heroImage: "/addons/time-of-day.jpg"
-tags: ["addon"]
+tags: ["addon", "godot", "sky", "clouds", "plugin", "glsl", "gdscript"]
 ---
 
 Plugin de cielo en tiempo real y tiempo para Godot Engine.

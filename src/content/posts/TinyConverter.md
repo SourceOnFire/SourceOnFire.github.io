@@ -4,7 +4,7 @@ description: "Convertidor de formatos de imágen"
 pubDate: "Mar 21 2025"
 updatedDate: "Mar 21 2025"
 heroImage: "/tools/tiny-converter.jpg"
-tags: ["app"]
+tags: ["app", "c#", ".net"]
 ---
 
 Un pequeño software convertidor de formatos de imagen. Soporta convertir imágenes a .jpg .jpeg .png. y .webp
