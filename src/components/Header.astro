@@ -72,11 +72,26 @@ const sections = [
 </header>
 
 <script>
-    // TODO: El el modo claro/oscuro se movera a un estado usando nanostates en el futuro.
+    
+    const darkTheme = "dark";
+    const lighTheme = "light";
+    const dataTheme = "data-theme";
+    
+    const preTheme = localStorage.getItem("theme");
+    if(preTheme === null || preTheme === ""){
+        localStorage.setItem("theme", darkTheme);
+        document.documentElement.setAttribute(dataTheme, darkTheme);
+        
+    }else{
+        document.documentElement.setAttribute(dataTheme, preTheme);
+    }
+
     const darkModeButton = document.querySelector("#darkmode");
     darkModeButton?.addEventListener("click", () => {
-        const isDark = document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
+        const isDark = document.documentElement.classList.toggle(darkTheme);
+        localStorage.setItem("theme", isDark ? darkTheme : lighTheme);
+        document.documentElement.setAttribute("data-theme", isDark ? darkTheme : lighTheme);
     });
+   
 </script>
 
