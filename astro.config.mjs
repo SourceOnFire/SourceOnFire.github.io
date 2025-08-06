@@ -5,13 +5,13 @@ import tailwind from '@astrojs/tailwind';
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-
+//theme: 'material-theme-darker',
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
   markdown: {
     shikiConfig: {
-      theme: 'material-theme-darker',
+      theme: 'one-dark-pro',
     },
   },
   site: "https://SourceOnFire.github.io",
