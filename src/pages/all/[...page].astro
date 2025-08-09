@@ -1,0 +1,21 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import PostGrid from "../../components/post/PostGrid.astro";
+
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const pages = await getCollection("posts");
+    return paginate(pages, { pageSize: 10 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<Layout title="All" description="all">
+    <SectionContainer id="all" title="All">
+        <PostGrid posts={page.data} />
+    </SectionContainer>
+</Layout>

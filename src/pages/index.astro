@@ -6,6 +6,11 @@ import AllPost from "../components/post/AllPost.astro";
 
 <Layout title="SourceOnFire" description="Software And Gamedev Page">
     <div class="flex flex-col gap-10">
+        <SectionContainer id="all" title="Lo Nuevo">
+            <section>
+                <AllPost limit={4} postType="all"/>
+            </section>
+        </SectionContainer>
         <SectionContainer id="home" title="Posts Recientes">
             <section>
                 <AllPost limit={4} postType="post"/>
@@ -19,6 +24,11 @@ import AllPost from "../components/post/AllPost.astro";
         <SectionContainer id="addons" title="Plugins Recientes">
             <section>
                 <AllPost limit={4} postType="addon"/>
+            </section>
+        </SectionContainer>
+        <SectionContainer id="proyectos" title="Proyectos Recientes">
+            <section>
+                <AllPost limit={4} postType="proyecto"/>
             </section>
         </SectionContainer>
     </div>

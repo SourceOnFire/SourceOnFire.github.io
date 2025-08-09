@@ -1,9 +1,9 @@
 ---
-title: "Crear un atributo C# personalizado en GDEngine 4"
+title: "Crear un atributo C# personalizado en Godot 4"
 description: "Crea un atributo personalizado C# en godot engine 4"
 pubDate: "Jul 15 2024"
 updatedDate: "Mar 21 2025"
-heroImage: "/post/post-gd-attr.jpg"
+heroImage: "/images/generic/godot-mono.jpg"
 tags: ["post", "godot", "c#", ".net"]
 ---
 

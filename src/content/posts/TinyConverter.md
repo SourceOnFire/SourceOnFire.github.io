@@ -1,9 +1,9 @@
 ---
 title: "Tiny Converter"
 description: "Convertidor de formatos de imágen"
-pubDate: "Mar 21 2025"
-updatedDate: "Mar 21 2025"
-heroImage: "/tools/tiny-converter.jpg"
+pubDate: "Mar 23 2025"
+updatedDate: "Mar 23 2025"
+heroImage: "/images/tools/tiny-converter.jpg"
 tags: ["app", "c#", ".net"]
 ---
 

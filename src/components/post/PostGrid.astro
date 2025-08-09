@@ -6,6 +6,10 @@ interface Props {
 }
 
 const { posts } = Astro.props;
+
+posts.sort((a: any, b: any) =>
+    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <div class="grid grid-cols-1 gap-5">
@@ -22,7 +26,7 @@ const { posts } = Astro.props;
         {
             posts
                 .filter(function (post: any) {
-                    if (post.data.pubDate != posts[0].data.pubDate) 
+                    if (post.data.updatedDate != posts[0].data.updatedDate) 
                         return post;
                 })
                 .map((post: any) => (

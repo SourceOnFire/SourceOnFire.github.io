@@ -3,7 +3,7 @@ title: "Time Of Day"
 description: "Plugin de cielo en dinámico y tiempo para GD Engine4"
 pubDate: "Mar 21 2025"
 updatedDate: "Mar 21 2025"
-heroImage: "/addons/time-of-day.jpg"
+heroImage: "/images/addons/time-of-day.jpg"
 tags: ["addon", "godot", "sky", "clouds", "plugin", "glsl", "gdscript"]
 ---
 
