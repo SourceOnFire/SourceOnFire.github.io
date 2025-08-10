@@ -16,7 +16,7 @@ Para este proyecto utilice JWT para el inicio de sesión, arquitectura en N-Capa
 <div class="text-center p-10 justify-center items-center gap-5 flex flex-row">
 <a 
 href="https://github.com/j-c7/minimarket-backend" target=_bank 
-class="text-center font-bold p-5 rounded-md bg-blue-600 hover:bg-blue-500"> 
+class="text-center font-bold p-5 w-full rounded-md bg-blue-600 hover:bg-blue-500"> 
     Repositorio
 </a>
 

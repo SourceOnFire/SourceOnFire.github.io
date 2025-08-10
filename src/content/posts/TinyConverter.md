@@ -13,10 +13,10 @@ El programa es útil para convertir al formato de imagen .webp que es un formato
 
 <br><br>
 
-<div class="text-center p-10">
+<div class="text-center p-10 justify-center items-center gap-5 flex flex-row">
 <a 
 href="https://sourceonfire.itch.io/tinyconverter" target=_bank 
-class="text-center font-bold p-5 rounded-md bg-blue-600 hover:bg-blue-500"> 
+class="text-center font-bold p-5 rounded-md w-full bg-blue-600 hover:bg-blue-500"> 
     Descargar 
 </a>
 </div>
