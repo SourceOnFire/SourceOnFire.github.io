@@ -24,7 +24,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 ---
 
 <Layout title="All" description="all">
-    <SectionContainer id="all" title={pg}>
+    <SectionContainer id="all" title={pg[0]}>
         <AllPost limit={20} postType="all"/>
     </SectionContainer>
 </Layout>
