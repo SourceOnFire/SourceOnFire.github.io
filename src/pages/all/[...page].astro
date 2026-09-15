@@ -7,7 +7,7 @@ import PostGrid from "../../components/post/PostGrid.astro";
 import AllPost from "../../components/post/AllPost.astro";
 
 
-const paramName = Atro.url.searchParams.get('tagName');
+const paramName = Astro.url.searchParams.get('tagName');
 
 export const getStaticPaths = (async ({ paginate }) => {
     const pages = await getCollection("posts");
