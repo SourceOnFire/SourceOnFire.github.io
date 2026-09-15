@@ -9,7 +9,7 @@ import AllPost from "../../components/post/AllPost.astro";
 
 //const paramName = Astro.url.searchParams.get('tagName');
 
-const pg = Astro.params.page;
+//const pg = Astro.params.page;
 //const segments = pg ? pg.split('/') : [];
 //const lastSegment = pg[pg.length - 1];
 //const paramName = lastSegment?.substring(2);
@@ -20,11 +20,11 @@ export const getStaticPaths = (async ({ paginate }) => {
     return paginate(pages, { pageSize: 10 });
 }) satisfies GetStaticPaths;
 
-//const { page } = Astro.props;
+const { page } = Astro.props;
 ---
 
 <Layout title="All" description="all">
-    <SectionContainer id="all" title={pg[0]}>
+    <SectionContainer id="all" title={page[0]}>
         <AllPost limit={20} postType="all"/>
     </SectionContainer>
 </Layout>
