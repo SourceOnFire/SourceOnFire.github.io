@@ -22,10 +22,11 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 const pageUrl = Astro.url.href;
+const ptag = Astro.url.searchParams.get('tag');
 ---
 
 <Layout title="All" description="all">
-    <SectionContainer id="all" title={pageUrl}>
+    <SectionContainer id="all" title={ptag}>
         <AllPost limit={20} postType="all"/>
     </SectionContainer>
 </Layout>
