@@ -24,7 +24,7 @@ const { page } = Astro.props;
 ---
 
 <Layout title="All" description="all">
-    <SectionContainer id="all" title={lastSegment}>
+    <SectionContainer id="all" title={slug}>
         <AllPost limit={20} postType="all"/>
     </SectionContainer>
 </Layout>
