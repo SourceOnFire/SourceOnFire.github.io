@@ -22,7 +22,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 const pageUrl = Astro.url.href;
-const ptag = Astro.url.searchParams.get('tag');
+const ptag = Astro.url.searchParams.get('/tag');
 ---
 
 <Layout title="All" description="all">
