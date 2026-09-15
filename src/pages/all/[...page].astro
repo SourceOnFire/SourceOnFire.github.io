@@ -9,9 +9,9 @@ import AllPost from "../../components/post/AllPost.astro";
 
 //const paramName = Astro.url.searchParams.get('tagName');
 
-const { slug } = Astro.params;
-const segments = slug ? slug.split('/') : [];
-const lastSegment = segments[segments.length - 1];
+const pg = Astro.params.page;
+//const segments = pg ? pg.split('/') : [];
+const lastSegment = pg[pg.length - 1];
 const paramName = lastSegment?.substring(2);
 
 
@@ -24,7 +24,7 @@ const { page } = Astro.props;
 ---
 
 <Layout title="All" description="all">
-    <SectionContainer id="all" title={page}>
+    <SectionContainer id="all" title={paramName}>
         <AllPost limit={20} postType="all"/>
     </SectionContainer>
 </Layout>
