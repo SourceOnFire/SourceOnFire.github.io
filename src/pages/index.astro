@@ -2,10 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import AllPost from "../components/post/AllPost.astro";
+import Pill from "../components/buttons/Pill.astro";
+
+type Props = CollectionEntry<"posts">["data"];
+const { tags } = Astro.props;
+
 ---
 
 <Layout title="SourceOnFire" description="Software And Gamedev Page">
     <div class="flex flex-col gap-10">
+
+        <div class="mx-auto px-2 pt-2 pb-2 text-center mt-5 mb-5">
+                {tags?.map((pill: any) => <Pill pillname={pill} />)}
+        </div>
+    
         <SectionContainer id="all" title="Lo Nuevo">
             <section>
                 <AllPost limit={20} postType="all"/>
