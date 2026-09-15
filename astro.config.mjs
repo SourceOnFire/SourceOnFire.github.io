@@ -9,11 +9,12 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
+  trailingSlash: 'never',
   markdown: {
     shikiConfig: {
       theme: 'one-dark-pro',
     },
   },
   site: "https://SourceOnFire.github.io",
-  trailingSlash: 'never',
+  
 });
