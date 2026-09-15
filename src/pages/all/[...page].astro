@@ -11,7 +11,7 @@ import AllPost from "../../components/post/AllPost.astro";
 
 const { slug } = Astro.params;
 const segments = slug ? slug.split('/') : [];
-const paramName = segments[segments.length - 1].Slice(2);
+const paramName = segments[segments.length - 1].slice(2);
 
 
 export const getStaticPaths = (async ({ paginate }) => {
