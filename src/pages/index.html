@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Pill from "../components/buttons/Pill.astro";
+import PostCard from "../components/post/PostCard.astro";
+
+const posts = (await getCollection("posts"))
+.slice(0, limit)
+.sort((a: any, b: any) =>
+        b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf(),
+);
+
+/*
+const posts = await getCollection("posts");
+const allTags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
+allTags.sort();
+*/
+
+---
+
+<Layout title="SourceOnFire" description="Software And Gamedev Page">
+    <div class="flex flex-col gap-10">
+
+        <!--
+        <SectionContainer id="all_tags" title="Buscar por Tags">
+            <div class="mx-auto px-2 pt-2 pb-2 text-center mt-10 mb-2">
+                {allTags?.map((pill: any) => <Pill pillname={pill} />)}
+            </div>
+        </SectionContainer> 
+        -->
+    
+        <SectionContainer id="all" title="Lo Nuevo">
+            <section>
+                <div class="grid grid-cols-1 gap-5">
+                     <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+                        {
+                            posts
+                            .map((post: any) => (
+                                <li>
+                                    <PostCard
+                                        link={`/${post.slug}/`}
+                                        title={post.data.title}
+                                        imgSrc={post.data.heroImage}
+                                        description={post.data.description}
+                                        isFirst={false}
+                                    />
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+            </section>
+        </SectionContainer>
+    </div>
+</Layout>
