@@ -18,7 +18,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 <Layout title="All" description="all">
     <SectionContainer id="all" title={ptag}>
-        <PostGrid posts={ posts.filter((x) => x.data.tags?.includes("all")).slice(0, 20) } />
+        <PostGrid posts={ posts.filter((x) => (x.data.tags ?? []).includes("all")).slice(0, 20) } />
     </SectionContainer>
 </Layout>
 
