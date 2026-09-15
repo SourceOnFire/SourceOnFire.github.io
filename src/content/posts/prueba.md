@@ -3,7 +3,7 @@ title: "Prueba"
 description: "Prueba de crear un post desde github"
 pubDate: "Mar 22 2025"
 updatedDate: "Sep 15 2026"
-heroImage: "/images/proyectos/post.jpg"
+heroImage: "/images/generic/post.jpg"
 tags: ["proyecto", "nextjs", "nodejs", "sql server", "html", "css", "javascript", "tailwind", "express", "fullstack"]
 ---
 
