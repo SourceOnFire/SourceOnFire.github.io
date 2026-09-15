@@ -61,6 +61,11 @@ const { page } = Astro.props;
                             ))
                         }
                     </ul>
+                    <div>
+                        {page.url.prev ? <a href={page.url.prev}>← Anterior</a> : null}
+      
+                        {page.url.next ? <a href={page.url.next}>Siguiente →</a> : null}
+                    </div>
                 </div>  
             </section>
         </SectionContainer>
