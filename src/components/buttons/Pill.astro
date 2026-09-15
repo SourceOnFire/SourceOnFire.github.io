@@ -5,23 +5,25 @@ interface Props {
 const { pillname } = Astro.props;
 ---
 
-<button
+<a
 class="
 inline-block rounded-full px-4 py-1 md:text-sm text-xs font-semibold mr-2 mb-2
 bg-blue-600 text-white transition-transform duration-100 ease-out hover:scale-[1.1]
 "
 id="pillButton"
 data-msg={pillname}
+href("/all?=" + {pillName})
 >
     {pillname}
-</button>
+</a>
 
 <script>
+/*
     var button = document.querySelector("#pillButton") as Element;
     var msg = button?.dataset.msg;
     button?.addEventListener('click', () => {
         localStorage.setItem("tagName", msg);
         window.location.href = '/all';
         console.log("Item envíado");
-    });
+    });*/
 </script>
