@@ -17,7 +17,6 @@ id="pillButton"
 
 <script>
   document.getElementById('pillButton')?.addEventListener('click', () => {
-    localStorage.clear();
     localStorage.setItem('filterTag', {pillName});
     window.location.href = '/all';
   });
