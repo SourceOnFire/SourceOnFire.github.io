@@ -10,7 +10,7 @@ import PostCard from "../components/post/PostCard.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
     const posts = await getCollection("posts");
-    return paginate(posts.sort( (a: any, b: any) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf() ), { pageSize: 10 });
+    return paginate(posts.sort( (a: any, b: any) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf() ), { pageSize: 3 });
 }) satisfies GetStaticPaths;
 
 /*
@@ -62,9 +62,9 @@ const { page } = Astro.props;
                         }
                     </ul>
                     <div>
-                        {page.url.prev ? <a href={page.url.prev}>← Anterior</a> : null}
+                        {page.url.prev ? <a href={page.url.prev} class="text-center font-bold p-5 rounded-md bg-blue-600 hover:bg-blue-500"> >← Anterior</a> : null}
       
-                        {page.url.next ? <a href={page.url.next}>Siguiente →</a> : null}
+                        {page.url.next ? <a href={page.url.next} class="text-center font-bold p-5 rounded-md bg-blue-600 hover:bg-blue-500"> >Siguiente →</a> : null}
                     </div>
                 </div>  
             </section>
