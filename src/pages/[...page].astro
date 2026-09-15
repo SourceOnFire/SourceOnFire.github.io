@@ -51,9 +51,10 @@ const { page } = Astro.props;
                             ))
                         }
                     </ul>
-                    <div class="flex justify-between">
+                    <div class="flex justify-start">
                         {page.url.prev ? <a href={page.url.prev} class="w-40 text-lg text-center dark:bg-slate-600  dark:hover:bg-blue-500 bg-zinc-300 hover:bg-blue-500 hover:text-white p-1 rounded-xl mt-5">← Anterior</a> : null}
-      
+                    </div>
+                    <div class="flex justify-end">
                         {page.url.next ? <a href={page.url.next} class="w-40 text-lg text-center dark:bg-slate-600  dark:hover:bg-blue-500 bg-zinc-300 hover:bg-blue-500 hover:text-white p-1 rounded-xl mt-5">Siguiente →</a> : null}
                     </div>
                 </div>  
