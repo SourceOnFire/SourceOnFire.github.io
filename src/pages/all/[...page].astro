@@ -6,9 +6,6 @@ import SectionContainer from "../../components/SectionContainer.astro";
 import PostGrid from "../../components/post/PostGrid.astro";
 import AllPost from "../../components/post/AllPost.astro";
 
-
-const posts = (await getCollection("posts"));
-
 export const getStaticPaths = (async ({ paginate }) => {
     const pages = await getCollection("posts");
     return paginate(pages, { pageSize: 10 });
@@ -18,18 +15,13 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 <Layout title="All" description="all">
     <SectionContainer id="all" title={ptag}>
-        <PostGrid posts={ posts.filter((x) => (x.data.tags ?? []).includes("all")).slice(0, 20) } />
+        <AllPost limit={20} postType="all"/> 
     </SectionContainer>
 </Layout>
-
-
-
 
 <script>
   const params = new URLSearchParams(window.location.search);
   const tag = params.get('tag');
 
   console.log("El tag es:", tag);
-
- 
 </script>
