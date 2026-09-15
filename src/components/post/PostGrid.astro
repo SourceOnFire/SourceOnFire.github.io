@@ -7,13 +7,13 @@ interface Props {
 
 const { posts } = Astro.props;
 
-posts.sort((a: any, b: any) =>
-    b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+posts.sort(
+    (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <div class="grid grid-cols-1 gap-5">
-    <div>
+    <!--  <div>
         <PostCard
             link={`/${posts[0].slug}/`}
             title={posts[0].data.title}
@@ -29,6 +29,23 @@ posts.sort((a: any, b: any) =>
                     if (post.data.updatedDate != posts[0].data.updatedDate) 
                         return post;
                 })
+                .map((post: any) => (
+                    <li>
+                        <PostCard
+                            link={`/${post.slug}/`}
+                            title={post.data.title}
+                            imgSrc={post.data.heroImage}
+                            description={post.data.description}
+                            isFirst={false}
+                        />
+                    </li>
+                ))
+        }
+    </ul>-->
+    <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+        {
+            posts
+            
                 .map((post: any) => (
                     <li>
                         <PostCard
