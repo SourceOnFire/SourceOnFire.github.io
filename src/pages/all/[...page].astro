@@ -30,3 +30,19 @@ const ptag = Astro.url.searchParams.get('/tag');
         <AllPost limit={20} postType="all"/>
     </SectionContainer>
 </Layout>
+
+
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const tag = params.get('tag');
+
+  console.log("El tag es:", tag);
+
+  const contenedor = document.getElementById('resultado');
+  if (tag) {
+    contenedor.textContent = `Mostrando elementos filtrados por: ${tag}`;
+  } else {
+    contenedor.textContent = "No hay ningúna etiqueta seleccionada.";
+  }
+</script>
