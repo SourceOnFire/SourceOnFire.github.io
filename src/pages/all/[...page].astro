@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import PostGrid from "../../components/post/PostGrid.astro";
+import PostGrid from "../../components/post/AllPost.astro";
 
 const { slug } = Astro.params;
 const segments = slug ? slug.split('/') : [];
@@ -22,6 +23,6 @@ const { page } = Astro.props;
 
 <Layout title="All" description="all">
     <SectionContainer id="all" title="All">
-        <AllPost limit={20} postType="all"/>
+        <AllPost limit={20} postType={paramName}/>
     </SectionContainer>
 </Layout>
