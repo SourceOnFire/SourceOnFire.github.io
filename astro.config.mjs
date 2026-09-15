@@ -15,4 +15,5 @@ export default defineConfig({
     },
   },
   site: "https://SourceOnFire.github.io",
+  trailingSlash: 'never',
 });
