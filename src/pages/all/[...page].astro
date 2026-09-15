@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import PostGrid from "../../components/post/PostGrid.astro";
-import PostGrid from "../../components/post/AllPost.astro";
+import AllPost from "../../components/post/AllPost.astro";
 
 const { slug } = Astro.params;
 const segments = slug ? slug.split('/') : [];
