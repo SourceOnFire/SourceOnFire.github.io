@@ -21,7 +21,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
-const pageUrl = Astro.url.pathname;
+const pageUrl = Astro.url.href;
 ---
 
 <Layout title="All" description="all">
