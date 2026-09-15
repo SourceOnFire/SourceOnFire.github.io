@@ -6,9 +6,8 @@ import SectionContainer from "../../components/SectionContainer.astro";
 import PostGrid from "../../components/post/PostGrid.astro";
 import AllPost from "../../components/post/AllPost.astro";
 
-const { slug } = Astro.params;
-const segments = slug ? slug.split('/') : [];
-const paramName = segments[segments.length - 1];
+
+const paramName = Atro.url.searchParams.get('tagName');
 
 export const getStaticPaths = (async ({ paginate }) => {
     const pages = await getCollection("posts");
@@ -17,9 +16,6 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 ---
-
-<h1>Probando Slug: {slug}</h1>
-<h1>Probando Segmento Final: {paramName}</h1>
 
 <Layout title="All" description="all">
     <SectionContainer id="all" title="All">
