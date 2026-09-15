@@ -19,8 +19,9 @@ data-msg={pillname}
 <script>
 var button = document.getElementById("pillButton");
 var msg = button?.dataset.msg;
-console.log(button);
-console.log(msg);
+button?.addEventListener('click', () => {
+    console.log("msg");
+});
 /*
     var button = document.querySelector("#pillButton") as Element;
     var msg = button?.dataset.msg;
