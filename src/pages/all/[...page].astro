@@ -16,7 +16,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 
 const { page } = Astro.props;
 ---
-
+<h1>{paramName}</h1>
 <Layout title="All" description="all">
     <SectionContainer id="all" title="All">
         <AllPost limit={20} postType={paramName}/>
