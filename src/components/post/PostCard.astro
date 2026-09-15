@@ -1,13 +1,17 @@
 ---
+import Pill from "../components/buttons/Pill.astro";
+
+
 interface Props {
     imgSrc?: string;
     link: string;
     title: string;
     description: string;
     isFirst: boolean;
+    pills: any
 }
 
-const { imgSrc, title, link, description, isFirst } = Astro.props;
+const { imgSrc, title, link, description, isFirst, tags } = Astro.props;
 
 //const outlineClasses = isFirst ? "card-outline dark:p-[1px] dark:hover:p-[3px] p-0 rounded-xl" : "";
 ---
@@ -32,6 +36,9 @@ const { imgSrc, title, link, description, isFirst } = Astro.props;
         >
             {title}
         </h1>
+        <div class="mx-auto px-2 pt-2 pb-2 text-center mt-5 mb-5">
+            {tags?.map((pill: any) => <Pill pillname={pill} />)}
+        </div>
     </a>
 </div>
 
