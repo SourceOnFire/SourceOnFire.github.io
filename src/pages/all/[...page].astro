@@ -5,6 +5,7 @@ import Layout from "../../layouts/Layout.astro";
 import SectionContainer from "../../components/SectionContainer.astro";
 import PostGrid from "../../components/post/PostGrid.astro";
 
+const { paramName } = Astro.params;
 
 export const getStaticPaths = (async ({ paginate }) => {
     const pages = await getCollection("posts");
@@ -16,6 +17,6 @@ const { page } = Astro.props;
 
 <Layout title="All" description="all">
     <SectionContainer id="all" title="All">
-        <PostGrid posts={page.data} />
+        <AllPost limit={20} postType={paramName}/>
     </SectionContainer>
 </Layout>
