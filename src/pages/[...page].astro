@@ -10,7 +10,8 @@ import PostCard from "../components/post/PostCard.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
     const posts = await getCollection("posts");
-    return paginate(posts, { pageSize: 2 });
+    return paginate(posts.sort((a: any, b: any) =>
+        b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf(), { pageSize: 10 });
 }) satisfies GetStaticPaths;
 
 /*
