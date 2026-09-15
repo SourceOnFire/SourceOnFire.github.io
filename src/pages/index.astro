@@ -26,6 +26,8 @@ const allTags = [...new Set(posts.flatMap((post) => post.data.tags || []))];
 allTags.sort();
 */
 
+const { page } = Astro.props;
+
 ---
 
 <Layout title="SourceOnFire" description="Software And Gamedev Page">
@@ -44,7 +46,7 @@ allTags.sort();
                 <div class="grid grid-cols-1 gap-5">
                      <ul class="grid grid-cols-1 lg:grid-cols-3 gap-3">
                         {
-                            posts
+                            page.data
                             .map((post: any) => (
                                 <li>
                                     <PostCard
