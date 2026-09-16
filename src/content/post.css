@@ -195,7 +195,7 @@ hr {
   padding: 1rem 1.25rem;
   border-left: 4px solid;
   border-radius: 0 6px 6px 0;
-  font-size: 0.95rem;
+  font-size: 2rem;
   line-height: 1.6;
 }
 
@@ -216,7 +216,7 @@ hr {
 
 /* Variación Warning */
 .flash-warning {
-  background-color: 255, 236, 112, 1;
+  background-color: rgba(255, 236, 112, 0.7);
   border-color: #9a6700;
   color: #1f2328;
 }
