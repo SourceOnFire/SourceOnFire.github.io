@@ -84,7 +84,30 @@ const { title, pubDate, updatedDate, heroImage, tags } = Astro.props;
 </html>
 
 <style>
-  
+   code {
+        padding: 2px 5px;
+        /*background-color: rgb(var(--gray-light));*/
+        border-radius: 2px;
+    }
+    pre {
+        background: #00000017;
+        border: 3px solid #3386f3;
+        color: #727272;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 2.5em;
+        display: block;
+        word-wrap: break-word;
+        border-radius: 7px;
+    }
+    pre > code {
+        all: unset;
+    }
 </style>
 
 <script>
