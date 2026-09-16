@@ -140,12 +140,10 @@ hr {
 .note {
     padding: 1rem;
     border-left: 4px solid #3182ce;
-    background-color: #ebf8ff;
     margin: 1rem 0;
 }
 .note-alert {
     border-left-color: #e53e3e;
-    background-color: #fff5f5;
 }
 
 
@@ -190,3 +188,39 @@ hr {
 .astro-code {
     background-color: var(--code-bg) !important;
 }
+
+/* Estilos globales */
+.flash-alert {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.flash-alert strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Variación Note */
+.flash-note {
+  background-color: #f0f7ff;
+  border-color: #0969da;
+  color: #1f2328;
+}
+.flash-note strong {
+  color: #0969da;
+}
+
+/* Variación Warning */
+.flash-warning {
+  background-color: #fff8c5;
+  border-color: #9a6700;
+  color: #1f2328;
+}
+.flash-warning strong {
+  color: #9a6700;
+}
+
