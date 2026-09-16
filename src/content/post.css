@@ -185,13 +185,13 @@ hr {
   padding: 1rem 1.25rem;
   border-left: 4px solid;
   border-radius: 0 6px 6px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
 .flash-alert strong {
   	display: block;
-	font-size: 2rem;
+	font-size: 1.5rem;
   	margin-bottom: 0.25rem;
 }
 
@@ -213,7 +213,7 @@ hr {
 }
 
 .flash-warning-dark {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border-color: #9a6700;
   color: #a19103;
 }
