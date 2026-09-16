@@ -12,7 +12,7 @@ export default defineConfig({
   trailingSlash: 'never',
   markdown: {
     shikiConfig: {
-      theme: 'ayu-dark',
+      theme: 'everforest-dark',
     },
   },
   site: "https://SourceOnFire.github.io",
