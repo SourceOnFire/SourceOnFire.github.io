@@ -172,7 +172,7 @@ hr {
 }
 
 [data-theme="light"]{
-	--code-bg: var(--shiki-dark-bg);
+	--code-bg: rgba(0, 0, 0, 0.8);
 }
 
 .astro-code {
