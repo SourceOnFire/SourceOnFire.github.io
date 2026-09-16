@@ -12,7 +12,7 @@ export default defineConfig({
   trailingSlash: 'never',
   markdown: {
     shikiConfig: {
-      theme: 'slack-ochin',
+      theme: 'poimandres',
     },
   },
   site: "https://SourceOnFire.github.io",
