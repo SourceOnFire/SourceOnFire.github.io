@@ -37,7 +37,7 @@ const { imgSrc, title, link, description, isFirst, tags } = Astro.props;
             {title}
         </h1>
         <div class="mx-auto px-2 pt-2 pb-2 text-center mt-5 mb-5">
-            {tags?.map((pill: any) => <Pill pillname={pill} />).slice(0, 4)}
+            {tags?.map((pill: any) => <Pill pillname={pill} />).slice(0, 3)}
         </div>
     </a>
 </div>
