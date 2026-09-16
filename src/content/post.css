@@ -185,13 +185,13 @@ hr {
   padding: 1rem 1.25rem;
   border-left: 4px solid;
   border-radius: 0 6px 6px 0;
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 1.6;
 }
 
 .flash-alert strong {
   	display: block;
-	font-size: 1.5rem;
+	font-size: 2rem;
   	margin-bottom: 0.25rem;
 }
 
