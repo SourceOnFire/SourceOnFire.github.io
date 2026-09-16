@@ -173,6 +173,7 @@ hr {
 
 [data-theme="light"]{
 	--code-bg: rgba(32, 32, 32, 0.9);
+}
 
 .astro-code {
     background-color: var(--code-bg) !important;
