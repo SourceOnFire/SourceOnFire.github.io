@@ -207,10 +207,17 @@ hr {
 
 /* Variación Warning */
 .flash-warning {
-  background-color: rgba(255, 236, 112, 0.7);
+  background-color: rgba(255, 236, 112, 0.2);
   border-color: #9a6700;
-  color: #1f2328;
+  color: #a19103;
 }
+
+.flash-warning-dark {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-color: #9a6700;
+  color: #a19103;
+}
+
 .flash-warning strong {
   color: #9a6700;
 }
