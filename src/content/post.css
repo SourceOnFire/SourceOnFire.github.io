@@ -137,16 +137,6 @@ hr {
 	border-top: 1px solid rgb(var(--gray-light));
 }
 
-.note {
-    padding: 1rem;
-    border-left: 4px solid #3182ce;
-    margin: 1rem 0;
-}
-.note-alert {
-    border-left-color: #e53e3e;
-}
-
-
 /*
 @media (max-width: 720px) {
 	body {
