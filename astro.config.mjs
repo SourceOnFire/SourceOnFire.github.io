@@ -11,10 +11,7 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
   trailingSlash: 'never',
   markdown: {
-    themes: {
-        light: 'github-light',
-        dark: 'poimandres',
-      },
+    theme: 'poimandres',  
   },
   site: "https://SourceOnFire.github.io",
   
