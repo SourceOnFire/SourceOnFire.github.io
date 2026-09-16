@@ -168,7 +168,7 @@ hr {
 
 
 [data-theme="dark"]{
-	--code-bg: rgba(0, 0, 0, 0.3);
+	--code-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"]{
