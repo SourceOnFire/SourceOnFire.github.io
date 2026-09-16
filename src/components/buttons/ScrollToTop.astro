@@ -67,24 +67,29 @@
     if (!scrollBtn) return;
 
     const checkScroll = () => {
-      if (window.scrollY > 300) {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      const distanceFromBottom = 150;
+      const isPastTopThreshold = scrollY > 300;
+      const isNearBottom = scrollY + windowHeight >= documentHeight - distanceFromBottom;
+
+      if (isPastTopThreshold && !isNearBottom) {
         scrollBtn.classList.add('show');
       } else {
         scrollBtn.classList.remove('show');
       }
     };
 
-    // Evento al hacer clic para subir suavemente
     scrollBtn.addEventListener('click', () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
-
     window.addEventListener('scroll', checkScroll);
   }
-
   setupScrollTop();
   document.addEventListener('astro:after-swap', setupScrollTop);
 </script>
