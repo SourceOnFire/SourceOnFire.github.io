@@ -206,11 +206,10 @@ hr {
 
 /* Variación Warning */
 .flash-warning {
-  border-color: #ffc400;
-  color: #a19103;
+  border-color: #bf9300;
 }
 
 .flash-warning strong {
-  color: #ffc400;
+  color: #bf9300;
 }
 
