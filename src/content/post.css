@@ -196,7 +196,6 @@ hr {
 
 /* Variación Note */
 .flash-note {
-  background-color: #f0f7ff;
   border-color: #0969da;
   color: #1f2328;
 }
@@ -206,13 +205,6 @@ hr {
 
 /* Variación Warning */
 .flash-warning {
-  background-color: rgba(255, 236, 112, 0.2);
-  border-color: #9a6700;
-  color: #a19103;
-}
-
-.flash-warning-dark {
-  background-color: rgba(0, 0, 0, 0.2);
   border-color: #9a6700;
   color: #a19103;
 }
