@@ -9,7 +9,7 @@ tags: ["godot", "C#", "Reflection"]
 
 En este post, voy a mostrar como crear un atributo personalizado en Godot Engine 4.x utilizando C#. Para este ejemplo, crearemos un atributo que se comporte como la función assert de gdscript para comprobar si el nodo no es nulo.
 
- <div class="note">Este método usa reflection, por lo que puede producir problemas con AOT.</div>
+ <div class="flash-note flash-warning">Este método usa reflection, por lo que puede producir problemas con AOT.</div>
  <br>
 
 Empezamos creando una nueva clase que se llamara **NodeNotNull** que herede de **System.Attribute**
