@@ -12,7 +12,7 @@ export default defineConfig({
   trailingSlash: 'never',
   markdown: {
     shikiConfig: {
-      theme: 'gruvbox-dark-hard',
+      theme: 'gruvbox-dark-medium',
     },
   },
   site: "https://SourceOnFire.github.io",
