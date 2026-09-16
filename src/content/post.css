@@ -187,7 +187,7 @@ hr {
 	.astro-code,
 	.astro-code span {
     	color: var(--shiki-dark) !important;
-    	background-color:#000000 !important;
+    	background-color:var(--shiki-dark-bg) !important;
     	/* Opcional, si también quieres estilos de fuente */
     	font-style: var(--shiki-dark-font-style) !important;
     	font-weight: var(--shiki-dark-font-weight) !important;
