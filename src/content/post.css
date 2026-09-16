@@ -173,6 +173,14 @@ hr {
 
 [data-theme="light"]{
 	--code-bg: rgba(32, 32, 32, 0.9);
+
+.astro-code {
+        
+    background-color: var(--code-bg) !important;
+        
+}
+   
+
 }*/
 
 @media (prefers-color-scheme: dark) {
@@ -186,13 +194,5 @@ hr {
     	text-decoration: var(--shiki-dark-text-decoration) !important;
   	}
 }
-
-
-.astro-code {
-        
-    background-color: var(--code-bg) !important;
-        
-}
-    
 
 
