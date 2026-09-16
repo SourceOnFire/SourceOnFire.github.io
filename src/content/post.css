@@ -179,39 +179,48 @@ hr {
     background-color: var(--code-bg) !important;
 }
 
-/* Estilos globales */
+/* Alertas */
+
 .flash-alert {
-  /*margin: 1.5rem 0;*/
-	margin: 1rem 0;
-  	/*padding: 1rem 1.25rem;*/
+  	margin: 1.5rem 0;
 	padding: 0.5rem 1.0rem;
   	border-left: 4px solid;
   	border-radius: 0 6px 6px 0;
   	font-size: 1.2rem;
   	line-height: 1.6;
 }
-
 .flash-alert strong {
   	display: block;
 	font-size: 1.5rem;
 	margin-bottom: 0.25rem;
 }
 
-/* Variación Note */
+/* Nota */
 .flash-note {
   border-color: #0969da;
   color: #1f2328;
 }
 .flash-note strong {
-  color: #0969da;
+  	color: #0969da;
+	margin-bottom: 0.25rem;
 }
 
-/* Variación Warning */
+/*Tip*/
+.flash-tip{
+
+}
+
+.flash-tip strong{
+
+}
+
+/*Warning */
 .flash-warning {
-  border-color: #bf9300;
+  	border-color: #bf9300;
 }
 
 .flash-warning strong {
-  color: #bf9300;
+  	color: #bf9300;
+	margin-bottom: 0.25rem;
 }
 
