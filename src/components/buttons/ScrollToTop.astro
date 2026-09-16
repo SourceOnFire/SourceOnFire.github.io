@@ -1,0 +1,90 @@
+---
+
+---
+
+<button id="scroll-to-top" aria-label="Ir arriba" class="scroll-top-btn">
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    class="icon" 
+    viewBox="0 0 24 24" 
+    stroke-width="2" 
+    stroke="currentColor" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 5l0 14" />
+    <path d="M18 11l-6 -6" />
+    <path d="M6 11l6 -6" />
+  </svg>
+</button>
+
+<style>
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Clase que activaremos con JS para mostrar el botón */
+  .scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .scroll-top-btn:hover {
+    background-color: #2563eb; /* Color al pasar el cursor (ej. Azul) */
+  }
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+</style>
+
+<script>
+  function setupScrollTop() {
+    const scrollBtn = document.getElementById('scroll-to-top');
+
+    if (!scrollBtn) return;
+
+    const checkScroll = () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    };
+
+    // Evento al hacer clic para subir suavemente
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    window.addEventListener('scroll', checkScroll);
+  }
+
+  setupScrollTop();
+  document.addEventListener('astro:after-swap', setupScrollTop);
+</script>
