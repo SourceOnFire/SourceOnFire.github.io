@@ -11,11 +11,8 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
   trailingSlash: 'never',
   markdown: {
-     shikiConfig: {
-      themes: {
-        light: 'github-light',
-        dark: 'github-dark',
-      },
+    shikiConfig: {
+      theme: 'synthwave-84',
     },
   },
   site: "https://SourceOnFire.github.io",
