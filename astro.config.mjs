@@ -11,7 +11,9 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap()],
   trailingSlash: 'never',
   markdown: {
-    theme: 'slack-ochin',  
+    shikiConfig: {
+      theme: 'slack-ochin',
+    },
   },
   site: "https://SourceOnFire.github.io",
   
