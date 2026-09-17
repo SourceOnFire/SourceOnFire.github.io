@@ -23,6 +23,10 @@ Prueba para crear posts desde github.
     <strong class="text-xl">¡ NOTA</strong> Esta es una nota.
 </div>
 
+<div class="flash-alert flash-tip">
+    <strong class="text-xl">° TIP</strong> Esta es un tip.
+</div>
+
 
 
 
