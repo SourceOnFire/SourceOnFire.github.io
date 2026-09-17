@@ -200,6 +200,7 @@ hr {
   border-color: #0969da;
   color: #1f2328;
 }
+
 .flash-note strong {
   	color: #0969da;
 	margin-bottom: 0.25rem;
@@ -207,11 +208,12 @@ hr {
 
 /*Tip*/
 .flash-tip{
-
+	border-color: #0bab00;
 }
 
 .flash-tip strong{
-
+	color: #0bab00
+	margin-bottom: 0.25rem;
 }
 
 /*Warning */
