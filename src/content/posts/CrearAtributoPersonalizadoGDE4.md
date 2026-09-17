@@ -4,7 +4,7 @@ description: "Crea un atributo personalizado C# en godot engine 4"
 pubDate: "Jul 15 2024"
 updatedDate: "Sep 16 2026"
 heroImage: "/images/generic/godot-mono.jpg"
-tags: ["godot", "C#", "Reflection"]
+tags: ["godot", "C#", "tutorial", "reflection"]
 ---
 
 En este post, voy a mostrar como crear un atributo personalizado en Godot Engine 4.x utilizando C#. Para este ejemplo, crearemos un atributo que se comporte como la función assert de gdscript para comprobar si el nodo no es nulo.
